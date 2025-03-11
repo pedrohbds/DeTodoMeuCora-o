@@ -13,52 +13,81 @@
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link href="carousel.css" rel="stylesheet">
     <style>
-      /* Estilos personalizados para o carrossel */
-      .carousel-item img {
-        width: 100%; /* Ocupa 100% da largura do contêiner */
-        height: 60vh; /* Altura relativa à altura da viewport */
-        object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-        filter: blur(2px); /* Desfoque só no fundo */
-        z-index: -1; /* Coloca a imagem no fundo */
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
       }
 
-      .carousel-caption {
-        background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor legibilidade */
-        padding: 20px;
-        border-radius: 10px;
-      }
-
-      /* Ajustes para telas menores */
-      @media (max-width: 768px) {
-        .carousel-item img {
-          height: 50vh; /* Reduz a altura em telas menores */
-        }
-
-        .carousel-caption {
-          padding: 10px; /* Reduz o padding do texto */
-        }
-
-        .carousel-caption h1 {
-          font-size: 1.5rem; /* Reduz o tamanho do título */
-        }
-
-        .carousel-caption p {
-          font-size: 0.9rem; /* Reduz o tamanho do texto */
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
       }
 
-      @media (max-width: 576px) {
-        .carousel-item img {
-          height: 40vh; /* Reduz ainda mais a altura em telas muito pequenas */
-        }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
 
-        .carousel-caption h1 {
-          font-size: 1.2rem; /* Título menor */
-        }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
 
-        .carousel-caption p {
-          font-size: 0.8rem; /* Texto menor */
-        }
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
       }
     </style>
   </head>
@@ -89,24 +118,36 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="ela.jpg" alt="Imagem 1" class="d-block w-100">
-            <div class="carousel-caption text-start">
-              <h1>Encanto dos teus olhos</h1>
-              <p class="opacity-75">Teus olhos me encantam tanto quanto o pôr do sol em uma tarde de primavera.</p>
+            <img src="ela.jpg" alt="" style="position: absolute; width: 100vw; height: 70vh; object-fit: cover; filter: blur(2px); z-index: -1;">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Encanto dos teus olhos</h1>
+                <p class="opacity-75" style="padding: 20px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.514);">
+                  Teus olhos me encantam tanto quanto o pôr do sol em uma tarde de primavera. E, como diria Neruda, não poderia admirar tal cena sem que os teus olhos se encontrassem com os meus.
+                </p>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="WhatsApp Image 2025-02-19 at 22.35.01 (1).jpeg" alt="Imagem 2" class="d-block w-100">
-            <div class="carousel-caption">
-              <h1>Eu te amo!</h1>
-              <p class="opacity-75">Eu te amo. Mas te amo sem te ver, sem te tocar, sem te ouvir...</p>
+            <img src="WhatsApp Image 2025-02-19 at 22.35.01 (1).jpeg" alt="" style="position: absolute; width: 100vw; height: 100vh; object-fit: cover; filter: blur(2px); z-index: -1;">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Eu te amo!</h1>
+                <p class="opacity-75" style="padding: 20px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.514);">
+                  Eu te amo. Mas te amo sem te ver, sem te tocar, sem te ouvir... Porque prefiro te sentir. Sentir você perto, sentir seu toque, sentir que não preciso de palavras para descrever o meu amor por você. Prefiro que o amor se revele no ato de amar, e não apenas nas palavras sobre ele.
+                </p>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="WhatsApp Image 2025-02-19 at 22.35.01 (2).jpeg" alt="Imagem 3" class="d-block w-100">
-            <div class="carousel-caption text-end">
-              <h1>Controvérsia</h1>
-              <p class="opacity-75">Controvérsia. É o que me vem à mente quando penso em te deixar a partir do meu abraço.</p>
+            <img src="WhatsApp Image 2025-02-19 at 22.35.01 (2).jpeg" alt="" style="position: absolute; width: 100vw; height: 100vh; object-fit: cover; filter: blur(2px); z-index: -1;">
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Controvérsia</h1>
+                <p class="opacity-75" style="padding: 20px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.514);">
+                  Controvérsia. É o que me vem à mente quando penso em te deixar a partir do meu abraço. Mas, saber que amar é também deixar ir, erro e peco ao não querer que você se vá... levando as cores do meu mundo.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -135,7 +176,7 @@
             <p class="lead">Nunca imaginei que a garota da qual me encantou somente com seu olhar e seu jeito de andar poderia virar uma das pessoas mais importantes pra mim hoje, uma das pessoas que eu faço questão de estar ao lado, toda vez que penso nisso me relembro o quanto Deus é perfeito a ponto de te fazer criação dele... eternizo essa data especial no meu coração e te quero ao meu lado para sempre!</p>
           </div>
           <div class="col-md-5">
-            <img src="WhatsApp Image 2025-02-20 at 00.23.28.jpeg" alt="" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="WhatsApp Image 2025-02-20 at 00.23.28.jpeg" alt="" style="width: 500px; height: 500px; object-fit: cover;">
           </div>
         </div>
 
@@ -147,7 +188,7 @@
             <p class="lead">Nosso primeiro mês de namoro... Na minha cabeça, eu já te namorava e te amava há muito tempo. Seu sorriso irradiava sua beleza e me envolvia em uma confusão, como se fosse a primeira vez que eu te via. Seus olhos brilhavam como a lua naquela noite de céu limpo, e cada estrela desse céu me fazia lembrar de você.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img src="WhatsApp Image 2025-02-19 at 22.34.58 (1).jpeg" alt="" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="WhatsApp Image 2025-02-19 at 22.34.58 (1).jpeg" alt="" style="width: 500px; height: 500px; object-fit: cover;">
           </div>
         </div>
 
@@ -159,7 +200,7 @@
             <p class="lead">Eu te amo dos pés à cabeça e da cabeça aos pés, de corpo e alma. Com consciência e ciência, me hipnotizo pela tua essência. Tão forte é o envolvimento que nem a demência me faz esquecer da tua forma de expressar decência. Garota dos cabelos pretos, que faz meu corpo gerar incandescências, te prometo o meu amor com indescência.</p>
           </div>
           <div class="col-md-5">
-            <img src="WhatsApp Image 2025-02-20 at 00.02.18.jpeg" alt="" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="WhatsApp Image 2025-02-20 at 00.02.18.jpeg" alt="" style="width: 500px; height: 500px; object-fit: cover;">
           </div>
         </div>
 
